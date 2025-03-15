@@ -1,12 +1,11 @@
 import pynput
 from pynput import mouse, keyboard
 
-# Koordinatları almak için fare kontrolcüsü
 mouse_controller = mouse.Controller()
 
 def on_press(key):
     try:
-        if key.char == 'k':  # 'k' tuşuna basıldığında
+        if key.char == 'k': 
             position = mouse_controller.position
             print(f"Fare Koordinatları: {position}")
     except AttributeError:
